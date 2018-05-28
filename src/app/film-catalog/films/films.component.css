@@ -1,6 +1,105 @@
 .example-card {
     max-width: 400px;
-  }
+}
+
+/* angular.material */
+.mat-grid-list{
+    margin: 15px auto 0 auto;
+    max-width: 1200px;
+}
+.mat-grid-tile .mat-figure{
+    align-items: flex-start;
+}
+.mat-card{
+    position: relative;
+    height: 100%;
+}
+.mat-card-image{
+    height: auto;
+    width: auto;
+}
 
 
-  div {color: red}
+/* Custom grid */
+.container{
+    margin: 30px 0 0 0;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.film, .film-container, .film-poster, .film-content{
+    box-sizing: border-box;
+}
+.film{
+    flex: 0 0 100%;
+    padding: 15px;
+}
+.film-container{
+    margin: 0 auto;
+    max-width: 300px;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+span.year{
+    position: absolute;
+    background: rgba(63, 81, 181, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 14px;
+}
+img.film-poster{
+    max-width: 100%;
+}
+.film-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+.film-content .end{
+    align-self: flex-end;
+}
+h4{
+    margin-top: 0;
+}
+@media (min-width: 650px){
+    .film-container{
+        max-width: none;
+        display: flex;
+    }
+    .film-content{
+        height: auto;
+    }
+    img.film-poster{
+        max-height: 230px;
+    }
+}
+@media (min-width: 900px){
+    .row{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .film{
+        flex: 0 0 330px;
+        max-width: 330px;
+    }
+    .film-container{
+        flex-direction: column;
+        height:100%;
+    }
+    img.film-poster{
+        height: auto;
+        max-height: none;
+        max-width: 300px;
+    }
+    .film-content{
+        height: 100%;
+    }
+}
