@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  styleUrls: ['./main.component.css'],
   //styles: [`h2 {color: red;}`, ``]
 })
 export class MainComponent implements OnInit {
@@ -13,6 +14,6 @@ export class MainComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {  }
 
 }
