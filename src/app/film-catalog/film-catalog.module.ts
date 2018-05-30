@@ -10,6 +10,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTabsModule} from '@angular/material/tabs';
+import {FilmService} from './film.service';
 
 @NgModule({
   imports: [
@@ -21,10 +22,13 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatTabsModule
   ],
   declarations: [
-    MainComponent, 
-    FilmsComponent, 
-    DetailsComponent,
-    TabsComponent
+    MainComponent,
+      FilmsComponent,
+      DetailsComponent,
+      TabsComponent
+  ],
+  providers: [
+      FilmService
   ]
 })
 export class FilmCatalogModule { }

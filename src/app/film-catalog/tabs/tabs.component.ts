@@ -1,5 +1,5 @@
-import { Component, OnInit} from '@angular/core';
-import { FilmService } from '../film.service';
+import {Component, OnInit} from '@angular/core';
+import {FilmService} from "../film.service";
 
 @Component({
   selector: 'app-tabs',
@@ -8,15 +8,10 @@ import { FilmService } from '../film.service';
 })
 export class TabsComponent implements OnInit {
 
-  films: object[];
-
-  constructor(private filmsService: FilmService) { }
-
-  getFilms(): void {
-    this.films = this.filmsService.films;
-  }
+  films;
+  constructor(private filmService: FilmService) { }
 
   ngOnInit() {
-    this.getFilms();
+      this.films = this.filmService.Films;
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FilmService } from '../film.service';
+import {FilmService} from "../film.service";
 
 @Component({
   selector: '.films',
@@ -7,19 +7,12 @@ import { FilmService } from '../film.service';
   styleUrls: ['./films.component.css']
 })
 export class FilmsComponent implements OnInit {
+  films;
+  description = 'Middle card description';
 
-  description: string = 'Middle card description';
+  constructor(private filmService: FilmService) {}
 
-  films: object[];
-  
-  constructor(private filmsService: FilmService) {}
-
-  getFilms(): void {
-    this.films = this.filmsService.films;
-  }
-  
   ngOnInit() {
-    this.getFilms();
+      this.films = this.filmService.Films;
   }
-  
 }
