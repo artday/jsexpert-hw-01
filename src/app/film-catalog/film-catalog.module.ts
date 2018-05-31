@@ -11,6 +11,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTabsModule} from '@angular/material/tabs';
 import {FilmService} from './film.service';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import {FilmService} from './film.service';
     MainComponent,
       FilmsComponent,
       DetailsComponent,
-      TabsComponent
+      TabsComponent,
+      TestComponent
   ],
   providers: [
       FilmService
